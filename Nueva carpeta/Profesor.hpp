@@ -1,28 +1,26 @@
-#include<iostream>
-#ifndef Profesor_HPP
-#define Profesor_HPP
+#ifndef PROFESOR_H
+#define PROFESOR_H
+
+#include<string>
 #include"Ramos.hpp"
 using namespace std;
 
-class Profesor{
-    private:
-    string nombre;
-    string apellido;
-    Ramos array[3];
-    
+class Profesor : public Persona{
+protected:
+
+    string ramosP[3];
 
 
 public:
-    Profesor(string nombre,string apellido){}
-
-    int gedEdad();
+    Profesor(string _nombre,string _apellido)
     string getNombre();
     string getApellido();
+    string getramosP();
 
 
     virtual void ingresarRamos();
 
-};
+}
 
 
 #endif 
